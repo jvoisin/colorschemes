@@ -1,0 +1,247 @@
+; vim: ft=colortemplate fdm=marker cc=40,55,70 vsts=39,15,15,4
+Full name:   Nord
+Short name:  nord
+Description: An arctic, north-bluish clean and elegant color scheme.
+Author:      Arctic Ice Studio and Sven Greb, and Julien Voisin
+URL:         https://github.com/vim/colorschemes
+License:     Same as Vim
+Options:     backend=vim
+
+Background: dark
+
+;;; Color palette
+;                Color name  GUI       Base256  Base16
+Color: nord0                 #2e3440   236      Black
+Color: nord1                 #3b4252   238      DarkGrey
+Color: nord2                 #434c5e   239      DarkGrey
+Color: nord3                 #4c566a   240      DarkGrey
+Color: nord3b                #616e88   60       Grey
+Color: nord4                 #d8dee9   253      Grey
+Color: nord5                 #e5e9f0   254      LightGrey
+Color: nord6                 #eceff4   255      White
+Color: nord7                 #8fbcbb   109      DarkCyan
+Color: nord8                 #88c0d0   116      Cyan
+Color: nord9                 #81a1c1   110      Blue
+Color: nord10                #5e81ac   67       DarkBlue
+Color: nord11                #bf616a   131      DarkRed
+Color: nord12                #d08770   173      DarkYellow
+Color: nord13                #ebcb8b   222      Yellow
+Color: nord14                #a3be8c   144      Green
+Color: nord15                #b48ead   139      Magenta
+
+Environments: gui 256 16 8 0
+
+Term colors: nord1 nord11 nord14 nord13 nord9 nord15 nord8 nord5
+             nord3 nord11 nord14 nord13 nord9 nord15 nord7 nord6
+
+
+;;; links
+Terminal                               -> Normal
+StatusLineTerm                         -> StatusLine
+StatusLineTermNC                       -> StatusLineNC
+MessageWindow                          -> Pmenu
+PopupNotification                      -> WarningMsg
+PopupSelected                          -> PmenuSel
+CurSearch                              -> IncSearch
+LineNrAbove                            -> LineNr
+LineNrBelow                            -> LineNr
+CursorLineFold                         -> FoldColumn
+CursorLineSign                         -> SignColumn
+PreInsert                              -> NonText
+TabPanel                               -> TabLine
+TabPanelFill                           -> TabLineFill
+TabPanelSel                            -> TabLineSel
+
+;;; group links
+Conditional                            -> Statement
+Repeat                                 -> Statement
+Label                                  -> Statement
+Keyword                                -> Statement
+Exception                              -> Statement
+Operator                               -> Statement
+Include                                -> PreProc
+Define                                 -> PreProc
+Macro                                  -> PreProc
+PreCondit                              -> PreProc
+StorageClass                           -> Type
+Structure                              -> Type
+Typedef                                -> Type
+Debug                                  -> Special
+Tag                                    -> Special
+
+;;; ft links
+Added                                  -> diffAdded
+Changed                                -> diffChanged
+Removed                                -> diffRemoved
+markdownH1                             -> htmlH1
+markdownH2                             -> htmlH1
+markdownH3                             -> htmlH1
+markdownH4                             -> htmlH1
+markdownH5                             -> htmlH1
+markdownH6                             -> htmlH1
+markdownHeadingDelimiter               -> htmlH1
+markdownH1Delimiter                    -> htmlH1
+markdownH2Delimiter                    -> htmlH1
+markdownH3Delimiter                    -> htmlH1
+markdownH4Delimiter                    -> htmlH1
+markdownH5Delimiter                    -> htmlH1
+markdownH6Delimiter                    -> htmlH1
+pythonDecorator                        -> Decorator
+pythonDecoratorName                    -> Decorator
+typescriptDecorator                    -> Decorator
+rustAttribute                          -> Decorator
+
+
+;;; Highlight groups
+;             Group             Foreground  Background  Attributes
+
+Normal                          nord4       nord0
+
+Cursor                          nord0       nord4
+lCursor                         nord0       nord14
+CursorIM                        nord0       nord9
+CursorLine                      none        nord1
+/16/8                           none        none        underline
+CursorColumn                    none        nord1
+/16/8                           none        none
+ColorColumn                     none        nord1
+/16/8                           none        none        reverse
+Conceal                         nord3       none
+
+StatusLine                      nord8       nord3       bold
+/16/8                           nord8       nord3       reverse,bold
+StatusLineNC                    nord4       nord1
+/16/8                           nord4       nord1       reverse
+VertSplit                       nord2       none
+/16/8                           nord3       none
+VertSplitNC                     nord2       none
+/16/8                           nord3       none
+
+TabLine                         nord4       nord1
+/16/8                           nord4       nord1       reverse
+TabLineFill                     nord4       nord1
+/16/8                           none        none        reverse
+TabLineSel                      nord8       nord3       bold
+/16/8                           nord8       nord3       bold
+
+ToolbarLine                     none        nord1
+/16/8                           none        none        reverse
+ToolbarButton                   nord8       nord3       bold
+/16/8                           nord8       nord3       reverse,bold
+
+Pmenu                           nord4       nord2
+/16/8                           nord4       nord1
+PmenuSel                        nord8       nord3       bold
+/16/8                           nord8       nord3       bold
+PmenuKind                       nord7       nord2
+/16/8                           nord7       nord1
+PmenuKindSel                    nord7       nord3       bold
+/16/8                           nord7       nord3       bold
+PmenuExtra                      nord3       nord2
+/16/8                           nord3       nord1
+PmenuExtraSel                   nord4       nord3       bold
+/16/8                           nord4       nord3       bold
+PmenuSbar                       none        nord2
+/16/8                           none        none        reverse
+PmenuThumb                      none        nord3
+/16/8                           none        none        reverse
+PmenuMatch                      nord8       nord2       bold
+/16/8                           nord8       nord1       bold
+PmenuMatchSel                   nord8       nord3       bold
+/16/8                           nord8       nord3       bold
+Popup                           nord4       nord1
+/16/8                           none        none        reverse
+PopupBorder                     nord3       nord1
+/16/8                           none        none        reverse
+PopupTitle                      nord8       nord1       bold
+/16/8                           nord8       nord1       reverse,bold
+
+LineNr                          nord3       none
+CursorLineNr                    nord4       none        bold
+SignColumn                      nord1       none
+FoldColumn                      nord3       none
+Folded                          nord3       nord1       bold
+NonText                         nord2       none
+/16/8                           nord3       none
+EndOfBuffer                     nord1       none
+/16/8                           nord3       none
+SpecialKey                      nord3       none
+Directory                       nord8       none
+
+Visual                          none        nord2
+/16/8                           none        nord1
+VisualNOS                       none        nord2
+/16/8                           none        nord1
+
+Search                          nord1       nord8
+IncSearch                       nord6       nord10      underline
+QuickFixLine                    nord8       nord3       bold
+/16/8                           nord8       nord3       bold
+WildMenu                        nord8       nord1       bold
+/16/8                           nord8       nord1       bold
+MatchParen                      nord8       nord3       bold
+/16/8                           nord8       nord3       bold
+
+Error                           nord4       nord11
+ErrorMsg                        nord4       nord11
+WarningMsg                      nord0       nord13
+ModeMsg                         nord4       none
+MoreMsg                         nord8       none
+Question                        nord4       none
+Title                           nord4       none        bold
+TitleBar                        nord4       nord1
+TitleBarNC                      nord3       nord1
+
+debugPC                         none        nord10
+/16/8                           nord10      none        reverse
+debugBreakpoint                 nord3       nord0
+/16/8                           nord11      none        reverse
+
+Todo                            nord13      none        bold
+
+SpellBad                        none        none        underline
+SpellCap                        none        none        underline
+SpellLocal                      none        none        underline
+SpellRare                       none        none        underline
+
+
+;;; :h group-names
+Comment                         nord3b      none
+Constant                        nord4       none
+Number                          nord15      none
+Float                           nord15      none
+Boolean                         nord9       none
+String                          nord14      none
+Character                       nord14      none
+Identifier                      nord4       none
+Function                        nord8       none
+Statement                       nord9       none
+PreProc                         nord9       none
+Type                            nord9       none
+Special                         nord4       none
+SpecialChar                     nord13      none
+SpecialComment                  nord8       none
+Delimiter                       nord6       none
+Decorator                       nord12      none
+Underlined                      none        none        underline
+Ignore                          none        none
+
+DiffAdd                         nord14      nord0       reverse
+DiffChange                      nord13      nord0       reverse
+DiffDelete                      nord11      nord0       reverse
+DiffText                        nord9       nord0       reverse
+
+
+;;; common filetype groups
+diffAdded                       nord14      none
+diffChanged                     nord13      none
+diffRemoved                     nord11      none
+diffLine                        nord9       none
+diffFile                        nord8       none
+diffIndexLine                   nord7       none
+
+;; ftplugins
+htmlH1                          nord9       none        bold
+
+; No color support
+Include: _tcozero
